@@ -53,7 +53,12 @@
                   //search bias
                     if (value.manufacture.search(expression) != -1 || value.location.search(expression) != -1)
                     {
-                     $('#result').append('<li class="list-group-item link-class"><img src="'+value.image+'" height="40" width="40" class="img-thumbnail" /> '+value.manufacture+' | <span class="text-muted">'+value.location+'</span></li>');
+                      $('a').bind('click', function(e) {
+  var url = $(this).attr('href');
+  $('div#container').load(url); // load the html response into a DOM element
+  e.preventDefault(); // stop the browser from following the link
+});
+                     $('#result').append('<li class="list-group-item link-class"><img src="'+value.image+'"  /> '+value.manufacture+' | <span class="text-muted">'+value.location+'</span></li>');
                     }
             });
         });
