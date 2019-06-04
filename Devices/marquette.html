@@ -75,22 +75,7 @@
                   </div>
                   <div class="product-auction-form">
                       <form class="form-inline" action="/action_page.php">
-    <div class="radiobtn">
-      <label class="radio-inline">
-        <input type="radio" name="optradio">With RC
-      </label>
-    </div>
-    <div class="form-group">
-      <input id="" name="" type="text" placeholder="Amount" class="form-control input-md" required="">
-    </div>
-
-    <button type="submit" class="btn btn-danger">BID NOW</button>
-  </form>
-                  </div>
-                  </div>
-  	</div>
-  	<hr>
-  </div>
+  
 
   <div class="container product-detail-area">
   <div class="row">
@@ -182,6 +167,37 @@
       </div>
   </div>
   </div>
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+      $('#search').keyup(function(event) {
+          // $.ajaxSetup({ cache: false });
+          $('#result').html('');
+          var searchField = $('#search').val();
+          var expression = new RegExp(searchField, "i");
+          $.getJSON('data.json',function(data) {
+              $.each(data, function(key, value) {
+                //search bias
+                  if (value.manufacture.search(expression) != -1 || value.Model.search(expression) != -1)
+                  {
+
+
+
+
+
+                    $('#result').append('<li class="list-group-item link-class"><a href=" '+value.manuelurl+' " class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Link</a>'+value.manufacture+' | <span class="text-muted">'+value.Model+'</span></li>');
+                  }
+
+
+
+
+
+
+          });
+      });
+  });
+  });
+  </script>
 
 </body>
 </html>
