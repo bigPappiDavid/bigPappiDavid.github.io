@@ -1,16 +1,11 @@
 {
-  "artists" : [
+  "marquette" : [
     {
-      "artistname" : "Leonard Cohen",
-      "born" : "1934"
-      },
-    {
-      "artistname" : "Joe Satriani",
-      "born" : "1956"
-      },
-    {
-      "artistname" : "Snoop Dogg",
-      "born" : "1971"
-      }
+      "manufacture":"marquette",
+      "ProductCode": "3110",
+      "Model":"EAGLE 4000",
+      "manuelurl":"https://bigpappidavid.github.io/Devices/marquette.html",
+      "Cuff":"Double"
+
   ]
 }
