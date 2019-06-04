@@ -5,10 +5,40 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script type="text/javascript" src="devices.js"></script>
+  <script>
+  $(function() {
 
+    // User clicks the "getData" button
+    $("#getData").click(function() {
+
+      // Put artistList element and JSON file location into a variable
+      var artistList = $("#artistList");
+      var url = "https://www.quackit.com/json/tutorial/artists.txt";
+
+      // Get the JSON file
+      $.getJSON(url, function(data) {
+
+        // Put artist info into a variable
+        var artists = data.artists.map(function(item) {
+          return item.artistname + " (" + item.born + ")";
+        });
+
+        // Remove all child nodes (including text nodes)
+        artistList.empty();
+
+        // Format artists with HTML tags
+        if (artists.length) {
+          var content = "<li>" + artists.join("</li><li>") + "</li>";
+          var list = $("<ul>").html(content);
+          artistList.append(list);
+        }
+      });
+    });
+  });
+  </script>
 <body>
 
-  <button id="getData">Display Ar</button>
+  <button id="getData">Display Art</button>
   <div id="artistList"></div>
 
 
