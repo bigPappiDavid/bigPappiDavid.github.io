@@ -3,7 +3,7 @@ $(function() {
 
    var people = [];
 
-   $.getJSON('people.json', function(data) {
+   $.getJSON('data.json', function(data) {
        $.each(data.person, function(i, f) {
           var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
            "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
