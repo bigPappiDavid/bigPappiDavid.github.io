@@ -19,7 +19,7 @@ $(function() {
     $.getJSON(url, function(data) {
 
       // Put artist info into a variable
-      var artists = data.marquette.map(function(item) {
+      var marquette = data.marquette.map(function(item) {
         return item.manufacture + " (" + item.ProductCode + ")";
       });
 
