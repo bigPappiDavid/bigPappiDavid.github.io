@@ -1,3 +1,4 @@
+jQuery(document).ready(function($) {
 $(function() {
 
   // User clicks the "getData" button
@@ -26,4 +27,5 @@ $(function() {
       }
     });
   });
+});
 });
