@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function() {
 
   // User clicks the "getData" button
   $("#getData").click(function() {
