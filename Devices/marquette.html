@@ -19,16 +19,16 @@ $(function() {
     $.getJSON(url, function(data) {
 
       // Put artist info into a variable
-      var marquette = data.marquette.map(function(item) {
-        return item.manufacture + " (" + item.ProductCode + ")";
+      var artists = data.artists.map(function(item) {
+        return item.artistname + " (" + item.born + ")";
       });
 
       // Remove all child nodes (including text nodes)
       artistList.empty();
 
       // Format artists with HTML tags
-      if (marquette.length) {
-        var content = "<li>" + marquette.join("</li><li>") + "</li>";
+      if (artists.length) {
+        var content = "<li>" + artists.join("</li><li>") + "</li>";
         var list = $("<ul>").html(content);
         artistList.append(list);
       }
@@ -38,5 +38,5 @@ $(function() {
 </script>
 
 <!-- The output appears here -->
-<button id="getData">Display A </button>
+<button id="getData">Display Artists</button>
 <div id="artistList"></div>
