@@ -8,25 +8,25 @@ $(function() {
   $("#getData").click(function() {
 
     // Put artistList element and JSON file location into a variable
-    var model = $("#modelList");
+    var modelList = $("#modelList");
     var url = "https://bigpappidavid.github.io/Devices/model.json";
 
     // Get the JSON file
     $.getJSON(url, function(data) {
 
       // Put artist info into a variable
-      var marquette= data.marquette.map(function(item) {
-        return item.manufacture  + item.ProductCode ;
+      var marquette = data.marquette.map(function(item) {
+        return item.manufacture+ " (" + item.ProductCode + ")";
       });
 
       // Remove all child nodes (including text nodes)
-      model.empty();
+      modelList .empty();
 
-      Format artists with HTML tags
+      //Format artists with HTML tags
       if (marquette.length) {
         var content = "<li>" + marquette.join("</li><li>") + "</li>";
         var list = $("<ul>").html(content);
-        model.append(list);
+        modelList.append(list);
       }
     });
   });
@@ -34,5 +34,5 @@ $(function() {
 </script>
 
 <!-- The output appears here -->
-<button id="getData">Display Artis</button>
+<button id="getData">Display Artist</button>
 <div id="#modelList"></div>
