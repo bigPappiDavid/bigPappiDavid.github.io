@@ -13,13 +13,13 @@ $(function() {
 
     // Put artistList element and JSON file location into a variable
     var artistList = $("#artistList");
-    var url = "https://www.quackit.com/json/tutorial/artists.txt";
+    var url = "https://bigpappidavid.github.io/Devices/model.json";
 
     // Get the JSON file
     $.getJSON(url, function(data) {
 
       // Put artist info into a variable
-      var artists = data.artists.map(function(item) {
+      var artists = data.marquette.map(function(item) {
         return item.manufacture + " (" + item.ProductCode + ")";
       });
 
@@ -27,8 +27,8 @@ $(function() {
       artistList.empty();
 
       // Format artists with HTML tags
-      if (artists.length) {
-        var content = "<li>" + artists.join("</li><li>") + "</li>";
+      if (marquette.length) {
+        var content = "<li>" + marquette.join("</li><li>") + "</li>";
         var list = $("<ul>").html(content);
         artistList.append(list);
       }
@@ -38,5 +38,5 @@ $(function() {
 </script>
 
 <!-- The output appears here -->
-<button id="getData">Display </button>
+<button id="getData">Display A </button>
 <div id="artistList"></div>
