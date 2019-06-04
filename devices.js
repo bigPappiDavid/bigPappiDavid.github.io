@@ -1,5 +1,4 @@
-jQuery(document).ready(function($) {
-$(function() {
+$(document).ready(function(){
 
   // User clicks the "getData" button
   $("#getData").click(function() {
@@ -27,5 +26,5 @@ $(function() {
       }
     });
   });
-});
+
 });
