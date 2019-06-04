@@ -1,26 +1,29 @@
-$(document).ready(function() {
+$(function() {
 
-        // $.ajaxSetup({ cache: false });
+  // User clicks the "getData" button
+  $("#getData").click(function() {
 
-        $.getJSON('model.json',function(data) {
-            $.each(data, function(key, value) {
-              //search bias
-                if (value.manufacture.search(expression) != -1 || value.Model.search(expression) != -1)
-                {
+    // Put artistList element and JSON file location into a variable
+    var artistList = $("#artistList");
+    var url = "https://bigpappidavid.github.io/Devices/model.json";
 
+    // Get the JSON file
+    $.getJSON(url, function(data) {
 
+      // Put artist info into a variable
+      var artists = data.artists.map(function(item) {
+        return item.artistname + " (" + item.born + ")";
+      });
 
+      // Remove all child nodes (including text nodes)
+      artistList.empty();
 
-
-                  $('#result').append('<li class="list-group-item link-class"><a href=" '+value.manuelurl+' " class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Link</a>'+value.manufacture+' | <span class="text-muted">'+value.Model+'</span></li>');
-                }
-
-
-
-
-
-
-        });
+      // Format artists with HTML tags
+      if (artists.length) {
+        var content = "<li>" + artists.join("</li><li>") + "</li>";
+        var list = $("<ul>").html(content);
+        artistList.append(list);
+      }
     });
-
+  });
 });
