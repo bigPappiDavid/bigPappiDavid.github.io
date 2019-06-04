@@ -1,46 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+<!doctype html>
+<title>Example</title>
 
+<!-- Load JQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<!-- Load JSON file and output it-->
 <script>
+$(function() {
 
-    $(function() {
+  // User clicks the "getData" button
+  $("#getData").click(function() {
 
+    // Put artistList element and JSON file location into a variable
+    var artistList = $("#artistList");
+    var url = "https://www.quackit.com/json/tutorial/artists.txt";
 
-   var people = [];
+    // Get the JSON file
+    $.getJSON(url, function(data) {
 
-   $.getJSON('Devices/model.json', function(data) {
-       $.each(data.person, function(i, f) {
-          var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
-           "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
-           $(tblRow).appendTo("#userdata tbody");
-     });
+      // Put artist info into a variable
+      var artists = data.artists.map(function(item) {
+        return item.artistname + " (" + item.born + ")";
+      });
 
-   });
+      // Remove all child nodes (including text nodes)
+      artistList.empty();
 
+      // Format artists with HTML tags
+      if (artists.length) {
+        var content = "<li>" + artists.join("</li><li>") + "</li>";
+        var list = $("<ul>").html(content);
+        artistList.append(list);
+      }
+    });
+  });
 });
 </script>
-</head>
 
-<body>
-
-<div class="wrapper">
-<div class="profile">
-   <table id= "userdata" border="2">
-  <thead>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email Address</th>
-            <th>City</th>
-        </thead>
-      <tbody>
-
-       </tbody>
-   </table>
-
-</div>
-</div>
-
-</body>
-</html>
+<!-- The output appears here -->
+<button id="getData">Display Artists</button>
+<div id="artistList"></div>
