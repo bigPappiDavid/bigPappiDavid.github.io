@@ -8,31 +8,31 @@ $(function() {
   $("#getData").click(function() {
 
     // Put artistList element and JSON file location into a variable
-    var model = $("#marquette");
+    var model = $("#modelList");
     var url = "https://bigpappidavid.github.io/Devices/model.json";
 
     // Get the JSON file
     $.getJSON(url, function(data) {
 
       // Put artist info into a variable
-      var artists = data.model.map(function(item) {
-        return item.artistname  + item.ProductCode ;
+      var marquette= data.marquette.map(function(item) {
+        return item.manufacture  + item.ProductCode ;
       });
 
       // Remove all child nodes (including text nodes)
-      artistList.empty();
+      model.empty();
 
-      // Format artists with HTML tags
-      // if (artists.length) {
-      //   var content = "<li>" + artists.join("</li><li>") + "</li>";
-      //   var list = $("<ul>").html(content);
-      //   artistList.append(list);
-      // }
+      Format artists with HTML tags
+      if (marquette.length) {
+        var content = "<li>" + marquette.join("</li><li>") + "</li>";
+        var list = $("<ul>").html(content);
+        model.append(list);
+      }
     });
   });
 });
 </script>
 
 <!-- The output appears here -->
-<button id="getData">Display Artists</button>
+<button id="getData">Display Artistss</button>
 <div id="#marquette"></div>
