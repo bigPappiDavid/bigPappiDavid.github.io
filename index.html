@@ -51,14 +51,14 @@
             $.getJSON('data.json',function(data) {
                 $.each(data, function(key, value) {
                   //search bias
-                    if (value.manufacture.search(expression) != -1 || value.location.search(expression) != -1)
+                    if (value.manufacture.search(expression) != -1 || value.Model.search(expression) != -1)
                     {
 
 
 
 
 
-                      $('#result').append('<li class="list-group-item link-class"><a href=" '+value.url+' " class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Link</a>'+value.manufacture+' | <span class="text-muted">'+value.location+'</span></li>');
+                      $('#result').append('<li class="list-group-item link-class"><a href=" '+value.url+' " class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Link</a>'+value.manufacture+' | <span class="text-muted">'+value.Model+'</span></li>');
                     }
 
 
