@@ -1,12 +1,5 @@
 [
-  "person": [
-         {
-             "firstName": "Clark",
-             "lastName": "Kent",
-             "job": "Reporter",
-             "roll": 20
-         }
-       ]
+
   {
     "manufacture":"marquette",
     "Product Code": "3110",
@@ -40,5 +33,7 @@
     "manuelurl":"https://www.medwrench.com/documents/view/3991/datascope-passport-xg-passort-5-lead-5l-lt-service-manual",
     "Cuff":"Single"
   }
+
+
 
 ]
