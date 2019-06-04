@@ -10,24 +10,7 @@
 
 <link rel="stylesheet" href="devices.css">
 <!-- <script src="devices.js"></script> -->
-<script>
 
-    $(function() {
-
-
-   var people = [];
-
-   $.getJSON('data.json', function(data) {
-       $.each(data.person, function(i, f) {
-          var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
-           "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
-           $(tblRow).appendTo("#userdata tbody");
-     });
-
-   });
-
-});
-</script>
 
 
   </head>
@@ -52,10 +35,28 @@
   </div>
   </div>
 
+  <script>
+
+      $(function() {
+
+
+     var people = [];
+
+     $.getJSON('data.json', function(data) {
+         $.each(data.person, function(i, f) {
+            var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
+             "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
+             $(tblRow).appendTo("#userdata tbody");
+       });
+
+     });
+
+  });
+  </script>
 
   </body>
 
 
 
-</body>
+
 </html>
