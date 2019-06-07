@@ -112,7 +112,7 @@ $(function() {
       //document.getElementById("demo").innerHTML = test;
       // Format model with HTML tags
       if (marquette2.length) {
-        var content = "<li>" +("</li><li>") + "</li>";
+        var content = "<li>" + marquette2.join("</li><li>") + "</li>";
         var list = $("<ul>").html(content);
         infoList.append(list);
 
@@ -152,7 +152,14 @@ $(function() {
                       			<div class="col-md-6 content1-left">
                       				<h3>What are some basic details about this monitor<span class="blinker">?</span></h3>
 
-                              <div id="infoList"></div>
+                              <div class="container">
+  <h2>List Group With Badges</h2>
+  <ul class="list-group">
+    <li class="list-group-item">New <span class="badge">12</span></li>
+    <li class="list-group-item">Deleted <span class="badge">5</span></li>
+    <li class="list-group-item">Warnings <span class="badge">3</span></li>
+  </ul>
+</div>
                       				<!-- <p>Build responsive, mobile-first projects on the web with the world’s most popular front-end component library.</p> -->
                       				<!-- <div class="content1-left"></div> -->
                       			</div>
