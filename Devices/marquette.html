@@ -70,16 +70,17 @@ $(function() {
       // Put artist info into a variable
       var marquette = data.marquette.map(function(item) {
         // return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
-        return item.manufacture ;
+        return JSON.stringify(item.manufacture);
       });
-      
 
+
+       dataString = marquette.join(",");
       // Remove all child nodes (including text nodes)
       infoList.empty();
 
-      var myJSON = JSON.stringify(marquette);
+      // var myJSON = JSON.stringify(marquette);
       // myJSON = json.replace(/\"([^(\")"]+)\":/g,"$1:");
-      document.getElementById("demo").innerHTML = myJSON;
+      document.getElementById("demo").innerHTML = dataString;
       // Format model with HTML tags
       if (marquette.length) {
         var content = "<li>" + marquette.join("</li><li>") + "</li>";
@@ -114,7 +115,7 @@ $(function() {
 		</div>
 	</div>
 	<div class="container-fluid home-content2">
-		<p><span>Testttt</span> and <span>announcements</span> for all things <span>Bootstrap</span>, including new <span>releases</span> and <span>Bootstrap Themes</span>.</p>
+		<p><span>T</span> and <span>announcements</span> for all things <span>Bootstrap</span>, including new <span>releases</span> and <span>Bootstrap Themes</span>.</p>
 	</div>
 
 <div id="getData">Display Ais</div>
