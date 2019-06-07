@@ -7,6 +7,12 @@
 		.blinker{
 			animation: blinker 1.5s linear infinite;
 		}
+
+    .container-fluid{
+    overflow: hidden;
+    padding-right: 0;
+    padding-left: 0;
+    }
 		@keyframes blinker {
 		  50% {
 			opacity: 0;
@@ -97,10 +103,4 @@ nav > div a.nav-item.nav-link:focus
     color:#fff;
     border-radius:0;
     transition:background 0.20s linear;
-}
-
-
-.container-fluid{
-  padding-right: 0;
-  padding-left: 0;
 }
