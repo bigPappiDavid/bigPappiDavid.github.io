@@ -91,6 +91,8 @@ $(function() {
         //return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
         return JSON.stringify(item.manufacture + " " + item.Model + " ");
       });
+
+
       var marquette2 = data.marquette.map(function(item) {
         return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
 
@@ -110,7 +112,7 @@ $(function() {
       //document.getElementById("demo").innerHTML = test;
       // Format model with HTML tags
       if (marquette2.length) {
-        var content = "<li>" + marquette2.join("</li><li>") + "</li>";
+        var content = "<li>" +("</li><li>") + "</li>";
         var list = $("<ul>").html(content);
         infoList.append(list);
 
