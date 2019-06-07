@@ -76,7 +76,8 @@ $(function() {
       // Remove all child nodes (including text nodes)
       infoList.empty();
 
-
+      var myJSON = JSON.stringify(marquette);
+      document.getElementById("demo").innerHTML = myJSON;
       // Format model with HTML tags
       if (marquette.length) {
         var content = "<li>" + marquette.join("</li><li>") + "</li>";
@@ -93,7 +94,7 @@ $(function() {
 
 
 <div class="container-fluid home-main">
-		<h2> <pre id="infoList"></pre> <span class="blinker">.</span></h2>
+		<h2> <pre id="demo"></pre> <span class="blinker">.</span></h2>
 		<!-- <button type="button" class="btn btn-default">View Profile</button> -->
 	</div>
 	<div class="container-fluid home-content1">
@@ -111,7 +112,7 @@ $(function() {
 		</div>
 	</div>
 	<div class="container-fluid home-content2">
-		<p><span>Testtt</span> and <span>announcements</span> for all things <span>Bootstrap</span>, including new <span>releases</span> and <span>Bootstrap Themes</span>.</p>
+		<p><span>Testttt</span> and <span>announcements</span> for all things <span>Bootstrap</span>, including new <span>releases</span> and <span>Bootstrap Themes</span>.</p>
 	</div>
 
 <div id="getData">Display Ais</div>
