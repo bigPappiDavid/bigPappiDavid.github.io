@@ -79,8 +79,8 @@ $(function() {
 
       // Format model with HTML tags
       if (marquette.length) {
-        var content = "<li>" + marquette.join("</li><li>") + "</li>";
-        var list = $("<ul>").html(content);
+        var content = marquette.join;
+        var list = $("").html(content);
         infoList.append(list);
       }
     });
