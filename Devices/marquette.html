@@ -77,7 +77,7 @@ $(function() {
       infoList.empty();
 
       var myJSON = JSON.stringify(marquette);
-      myJSON = json.replace(/\"([^(\")"]+)\":/g,"$1:");
+      // myJSON = json.replace(/\"([^(\")"]+)\":/g,"$1:");
       document.getElementById("demo").innerHTML = myJSON;
       // Format model with HTML tags
       if (marquette.length) {
