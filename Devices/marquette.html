@@ -20,7 +20,7 @@ $(function() {
 
       // Put artist info into a variable
       var marquette = data.marquette.map(function(item) {
-        return item.manufacture + " (" + item.ProductCode + ")" + item.model;
+        return item.manufacture + " (" + item.ProductCode + ")" + item.model + item.manuelurl + item.Cuff;
       });
 
       // Remove all child nodes (including text nodes)
