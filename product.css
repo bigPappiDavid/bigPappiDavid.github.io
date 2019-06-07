@@ -51,27 +51,42 @@
     width: 650px;
 }
 
-.how-section1{
-    margin-top:-15%;
-    padding: 10%;
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-.how-section1 h4{
-    color: #ffa500;
-    font-weight: bold;
-    font-size: 30px;
+section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
-.how-section1 .subheading{
-    color: #3931af;
-    font-size: 20px;
+
+.lnr {
+  display: inline-block;
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.05em;
+  stroke-width: 1;
 }
-.how-section1 .row
-{
-    margin-top: 10%;
+
+.services-icon {
+  margin-bottom: 20px;
+  font-size: 30px;
 }
-.how-img
-{
-    text-align: center;
+bgc2, .vLine, .hLine {
+    background-color: #0F52BA;
 }
-.how-img img{
-    width: 40%;
+
+.quote-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.services-icon {
+    font-size: 60px;
+    margin-left: 2rem;
 }
