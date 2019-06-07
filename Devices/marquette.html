@@ -91,21 +91,26 @@ $(function() {
         //return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
         return JSON.stringify(item.manufacture + " " + item.Model + " ");
       });
+      var marquette2 = data.marquette.map(function(item) {
+        return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
+
+      });
 
       // Remove all child nodes (including text nodes)
        //infoList.empty();
 
        dataString = marquette.join();
        test = dataString.replace(/\"/g, "");
+       document.getElementById("demo").innerHTML = test;
 
 
 
       // var myJSON = JSON.stringify(marquette);
       // myJSON = json.replace(/\"([^(\")"]+)\":/g,"$1:");
-      document.getElementById("demo").innerHTML = test;
+      //document.getElementById("demo").innerHTML = test;
       // Format model with HTML tags
-      if (marquette.length) {
-        var content = "<li>" + marquette.join("</li><li>") + "</li>";
+      if (marquette2.length) {
+        var content = "<li>" + marquette2.join("</li><li>") + "</li>";
         var list = $("<ul>").html(content);
         infoList.append(list);
 
