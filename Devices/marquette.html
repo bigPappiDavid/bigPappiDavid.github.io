@@ -62,13 +62,14 @@ $(function() {
 
       // Remove all child nodes (including text nodes)
       infoList.empty();
+      infoList.append(list);
 
       // Format artists with HTML tags
-      if (marquette.length) {
-        var content = "<li>" + marquette.join("</li><li>") + "</li>";
-        var list = $("<ul>").html(content);
-        infoList.append(list);
-      }
+      // if (marquette.length) {
+      //   var content = "<li>" + marquette.join("</li><li>") + "</li>";
+      //   var list = $("<ul>").html(content);
+      //   infoList.append(list);
+      // }
     });
   });
 });
