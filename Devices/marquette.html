@@ -5,7 +5,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
 <!-- Load JSON file and output it-->
-<script>
+<!-- <script>
 $(function() {
 
   // User clicks the "getData" button
@@ -37,6 +37,43 @@ $(function() {
 });
 </script>
 
-<!-- The output appears here -->
+
 <button id="getData">Display Ais</button>
+<div id="infoList"></div> -->
+
+
+<script>
+$(function() {
+
+  // User clicks the "getData" button
+  $("#getData").(function() {
+
+    // Put artistList element and JSON file location into a variable
+    var infoList= $("#infoList");
+    var url = "https://bigpappidavid.github.io/Devices/model.json";
+
+    // Get the JSON file
+    $.getJSON(url, function(data) {
+
+      // Put artist info into a variable
+      var marquette = data.marquette.map(function(item) {
+        return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
+      });
+
+      // Remove all child nodes (including text nodes)
+      infoList.empty();
+
+      // Format artists with HTML tags
+      if (marquette.length) {
+        var content = "<li>" + marquette.join("</li><li>") + "</li>";
+        var list = $("<ul>").html(content);
+        infoList.append(list);
+      }
+    });
+  });
+});
+</script>
+
+
+<div id="getData">Display Ais</div>
 <div id="infoList"></div>
