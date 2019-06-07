@@ -46,3 +46,7 @@
 		.home-content2 p span{
 			font-weight: 500;
 		}
+.img {
+    max-width: 100%;
+    max-height: 100%;
+}
