@@ -64,7 +64,11 @@ $(function() {
       infoList.empty();
 
       // Format artists with HTML tags
-
+      if (marquette.length) {
+        var content = "<li>" + marquette.join("</li><li>") + "</li>";
+        var list = $("<ul>").html(content);
+        infoList.append(list);
+      }
     });
   });
 });
