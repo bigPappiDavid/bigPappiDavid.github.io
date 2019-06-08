@@ -120,12 +120,12 @@ $(function() {
       //  this sectino is to get the url
       var manuelUrl = data.marquette.map(function(item) {
         //return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
-        return JSON.stringify(item.manuelUrl);
+        return '<a href="emailto:' + item.manuelUrl+ '">' ;
       });
 
-      manuelUrlString = manuelUrl.join();
-      manuelUrlTest = manuelUrlString.replace(/\"/g, "");
-      document.getElementById("manuelUrl").innerHTML = manuelUrlTest;
+      // manuelUrlString = manuelUrl.join();
+      // manuelUrlTest = manuelUrlString.replace(/\"/g, "");
+       document.getElementById("manuelUrl").innerHTML = manuelUrl;
 
 
 
