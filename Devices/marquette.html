@@ -86,11 +86,26 @@ $(function() {
     // Get the JSON file
     $.getJSON(url, function(data) {
 
-      // Put artist info into a variable
-      var marquette = data.marquette.map(function(item) {
+      //  this sectino is to get the title info into a variable
+      var title = data.marquette.map(function(item) {
         //return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
         return JSON.stringify(item.manufacture + " " + item.Model + " ");
       });
+
+      dataString = title.join();
+      test = dataString.replace(/\"/g, "");
+      document.getElementById("demo").innerHTML = test;
+      /////////////////////////////////////////////////////////////////////////////////////////////
+      /////////////////////////////////////////////////////////////////////////////////////////////
+      /////////////////////////////////////////////////////////////////////////////////////////////
+      /////////////////////////////////////////////////////////////////////////////////////////////
+      //  this sectino is to get the Product Code
+      
+
+
+
+
+
 
 
       var marquette2 = data.marquette.map(function(item) {
@@ -101,9 +116,7 @@ $(function() {
       // Remove all child nodes (including text nodes)
        //infoList.empty();
 
-       dataString = marquette.join();
-       test = dataString.replace(/\"/g, "");
-       document.getElementById("demo").innerHTML = test;
+
        document.getElementById("demo1").innerHTML = test;
 
 
@@ -160,8 +173,8 @@ $(function() {
   <ul class="list-group">
 
     <li class="list-group-item " > <span class="badge">Manufacture</span> <h2  id="demo1"> </li>
-    <li class="list-group-item" > <span class="badge">Model</span> <h2  id="demo1"></li>
-    <li class="list-group-item"><span class="badge">Manuelurl</span> <h2  id="demo1"> </li>
+    <li class="list-group-item" > <span class="badge">Model</span> </li>
+    <li class="list-group-item"><span class="badge">Manuelurl</span> </li>
   </ul>
 </div>
                       				<!-- <p>Build responsive, mobile-first projects on the web with the world’s most popular front-end component library.</p> -->
