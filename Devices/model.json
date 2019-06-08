@@ -4,7 +4,7 @@
       "manufacture":"marquette",
       "ProductCode": "3110",
       "Model":"EAGLE 4000",
-      "manuelurl":"https://bigpappidavid.github.io/Devices/marquette.html",
+      "manuelUrl":"https://bigpappidavid.github.io/Devices/marquette.html",
       "Cuff":"Double",
       "modleImg":"https://www.scribd.com/document/216479082/GE-Eagle-4000-Service-Manual"
       }
@@ -14,9 +14,9 @@
   "Datascope" : [
     {
       "manufacture":"Datascope",
-      "Product Code": "3110",
+      "ProductCode": "3110",
       "Model":"Passport",
-      "manuelurl":"https://www.mindraynorthamerica.com/cmsAdmin/uploads/passport-5l-lt-xg-service-manual.pdf",
+      "manuelUrl":"https://www.mindraynorthamerica.com/cmsAdmin/uploads/passport-5l-lt-xg-service-manual.pdf",
       "Cuff":"Single"
       }
 
@@ -25,9 +25,9 @@
   "Datascope" : [
     {
       "manufacture":"Datascope",
-      "Product Code": "3110",
+      "ProductCode": "3110",
       "Model":"Passport2",
-      "manuelurl":"https://www.mindraynorthamerica.com/cmsAdmin/uploads/passport-2-service-manual_001.pdf",
+      "manuelUrl":"https://www.mindraynorthamerica.com/cmsAdmin/uploads/passport-2-service-manual_001.pdf",
       "Cuff":"Single"
       }
 
@@ -36,9 +36,9 @@
   "Datascope" : [
     {
       "manufacture":"Datascope",
-      "Product Code": "3110",
+      "ProductCode": "3110",
       "Model":"PassportXG",
-      "manuelurl":"https://www.medwrench.com/documents/view/3991/datascope-passport-xg-passort-5-lead-5l-lt-service-manual",
+      "manuelUrl":"https://www.medwrench.com/documents/view/3991/datascope-passport-xg-passort-5-lead-5l-lt-service-manual",
       "Cuff":"Single"
       }
 
