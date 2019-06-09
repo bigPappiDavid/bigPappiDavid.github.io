@@ -109,6 +109,21 @@ $(function() {
       manufactureTest = manufactureString.replace(/\"/g, "");
       document.getElementById("manufacture").innerHTML = manufactureTest;
 
+      /////////////////////////////////////////////////////////////////////////////////////////////
+      /////////////////////////////////////////////////////////////////////////////////////////////
+      /////////////////////////////////////////////////////////////////////////////////////////////
+      /////////////////////////////////////////////////////////////////////////////////////////////
+      //  this section is to get the Product Code
+      var Model = data.marquette.map(function(item) {
+        //return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
+        return JSON.stringify(item.Model);
+      });
+
+      ModelString = Model.join();
+      ModelTest = ModelString.replace(/\"/g, "");
+      document.getElementById("Model").innerHTML = ModelTest;
+
+
 
 
 
@@ -224,8 +239,9 @@ $(function() {
   <ul class="list-group">
 
 
+
     <li class="list-group-item " > <span class="badge">Manufacture</span> <h2  id="manufacture"> </h2> </li>
-    <li class="list-group-item " > <span class="badge">Model</span> </li>
+    <li class="list-group-item " > <span class="badge">Model</span> <h2  id="Model"> </h2> </li>
     <li class="list-group-item" > <span class="badge">ProductCode</span> <h2  id="ProductCode"> </h2> </li>
     <li class="list-group-item"><span class="badge">Manuel</span> <p id="manuelUrl"></p></li>
   </ul>
