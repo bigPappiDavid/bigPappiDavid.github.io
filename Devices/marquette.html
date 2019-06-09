@@ -165,6 +165,38 @@ $(function() {
       document.getElementById("manuelUrl").innerHTML = result;
 
 
+      /////////////////////////////////////////////////////////////////////////////////////////////
+      /////////////////////////////////////////////////////////////////////////////////////////////
+      /////////////////////////////////////////////////////////////////////////////////////////////
+      /////////////////////////////////////////////////////////////////////////////////////////////
+      //  this sectino is to get the url
+      var IMGUrl = data.marquette.map(function(item) {
+        //return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
+        return JSON.stringify(item.IMGUrl);
+      });
+
+
+
+
+      IMGUrlString = IMGUrl.join();
+      IMGUrlTest = IMGUrlString.replace(/\"/g, "");
+      // document.getElementById("manuelUrl").innerHTML = manuelUrlTest;
+      var str = "url";
+      var result = str.link(IMGUrlTest);
+      $("#demo").append("<img src='"+result+"' />")
+         });
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -250,7 +282,8 @@ $(function() {
                       				<!-- <div class="content1-left"></div> -->
                       			</div>
                       			<div class="col-md-6 content1-right">
-                              <img class="img" src="https://files1.kyozou.com/Pictures/_25/24981/24980289.jpg" alt="">
+                              <img class="img" id="demo"alt="">
+
                               <!-- <p>Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.</p> -->
                       			</div>
                       		</div>
