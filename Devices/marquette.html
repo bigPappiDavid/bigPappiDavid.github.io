@@ -99,6 +99,25 @@ $(function() {
       /////////////////////////////////////////////////////////////////////////////////////////////
       /////////////////////////////////////////////////////////////////////////////////////////////
       /////////////////////////////////////////////////////////////////////////////////////////////
+      //  this section is to get the Product Code
+      var manufacture = data.marquette.map(function(item) {
+        //return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
+        return JSON.stringify(item.manufacture);
+      });
+
+      manufactureString = manufacture.join();
+      manufactureTest = manufactureString.replace(/\"/g, "");
+      document.getElementById("manufacture").innerHTML = manufactureTest;
+
+
+
+
+
+
+      /////////////////////////////////////////////////////////////////////////////////////////////
+      /////////////////////////////////////////////////////////////////////////////////////////////
+      /////////////////////////////////////////////////////////////////////////////////////////////
+      /////////////////////////////////////////////////////////////////////////////////////////////
       //  this sectino is to get the Product Code
       var ProductCode = data.marquette.map(function(item) {
         //return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
@@ -204,7 +223,8 @@ $(function() {
   <!-- <h2>List Group With Badges</h2> -->
   <ul class="list-group">
 
-    <li class="list-group-item " > <span class="badge">Manufacture</span> </li>
+
+    <li class="list-group-item " > <span class="badge">Manufacture</span> <h2  id="manufacture"> </h2> </li>
     <li class="list-group-item " > <span class="badge">Model</span> </li>
     <li class="list-group-item" > <span class="badge">ProductCode</span> <h2  id="ProductCode"> </h2> </li>
     <li class="list-group-item"><span class="badge">Manuel</span> <p id="manuelUrl"></p></li>
