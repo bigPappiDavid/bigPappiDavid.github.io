@@ -91,10 +91,10 @@ $(function() {
       var title = data.Datascope1.map(function(item) {
 
         //return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
-        //return JSON.stringify(item.manufacture + " " + item.Model + " ");
+        return JSON.stringify(item.manufacture + " " + item.Model + " ");
       });
 
-      title.return.JSON.stringify(item.manufacture + " " + item.Model + " ");
+      //title.return.JSON.stringify(item.manufacture + " " + item.Model + " ");
 
       titleString = title.join();
       titleTest = titleString.replace(/\"/g, "");
