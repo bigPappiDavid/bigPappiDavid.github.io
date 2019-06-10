@@ -100,28 +100,28 @@ $(function() {
       /////////////////////////////////////////////////////////////////////////////////////////////
       /////////////////////////////////////////////////////////////////////////////////////////////
       //  this section is to get the Product Code
-      var manufacture = data.marquette.map(function(item) {
-        //return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
-        return JSON.stringify(item.manufacture);
-      });
-
-      manufactureString = manufacture.join();
-      manufactureTest = manufactureString.replace(/\"/g, "");
-      document.getElementById("manufacture").innerHTML = manufactureTest;
+      // var manufacture = data.marquette.map(function(item) {
+      //   //return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
+      //   return JSON.stringify(item.manufacture);
+      // });
+      //
+      // manufactureString = manufacture.join();
+      // manufactureTest = manufactureString.replace(/\"/g, "");
+      // document.getElementById("manufacture").innerHTML = manufactureTest;
 
       /////////////////////////////////////////////////////////////////////////////////////////////
       /////////////////////////////////////////////////////////////////////////////////////////////
       /////////////////////////////////////////////////////////////////////////////////////////////
       /////////////////////////////////////////////////////////////////////////////////////////////
       //  this section is to get the Product Code
-      var Model = data.marquette.map(function(item) {
-        //return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
-        return JSON.stringify(item.Model);
-      });
-
-      ModelString = Model.join();
-      ModelTest = ModelString.replace(/\"/g, "");
-      document.getElementById("Model").innerHTML = ModelTest;
+      // var Model = data.marquette.map(function(item) {
+      //   //return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
+      //   return JSON.stringify(item.Model);
+      // });
+      //
+      // ModelString = Model.join();
+      // ModelTest = ModelString.replace(/\"/g, "");
+      // document.getElementById("Model").innerHTML = ModelTest;
 
 
 
@@ -134,83 +134,83 @@ $(function() {
       /////////////////////////////////////////////////////////////////////////////////////////////
       /////////////////////////////////////////////////////////////////////////////////////////////
       //  this sectino is to get the Product Code
-      var ProductCode = data.marquette.map(function(item) {
-        //return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
-        return JSON.stringify(item.ProductCode);
-      });
-
-      ProductCodeString = ProductCode.join();
-      ProductCodeTest = ProductCodeString.replace(/\"/g, "");
-      document.getElementById("ProductCode").innerHTML = ProductCodeTest;
-
-
-
-
-
-      /////////////////////////////////////////////////////////////////////////////////////////////
-      /////////////////////////////////////////////////////////////////////////////////////////////
-      /////////////////////////////////////////////////////////////////////////////////////////////
-      /////////////////////////////////////////////////////////////////////////////////////////////
-      //  this sectino is to get the url
-      var manuelUrl = data.marquette.map(function(item) {
-        //return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
-        return JSON.stringify(item.manuelUrl);
-      });
-
-      manuelUrlString = manuelUrl.join();
-      manuelUrlTest = manuelUrlString.replace(/\"/g, "");
-      // document.getElementById("manuelUrl").innerHTML = manuelUrlTest;
-      var str = "url";
-      var result = str.link(manuelUrlTest);
-      document.getElementById("manuelUrl").innerHTML = result;
-
-
-      /////////////////////////////////////////////////////////////////////////////////////////////
-      /////////////////////////////////////////////////////////////////////////////////////////////
-      /////////////////////////////////////////////////////////////////////////////////////////////
-      /////////////////////////////////////////////////////////////////////////////////////////////
-      //  this sectino is to get the url
-      var IMGUrl = data.marquette.map(function(item) {
-        //return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
-        return JSON.stringify(item.IMGUrl);
-      });
-
-
-
-
-      IMGUrlString = IMGUrl.join();
-      IMGUrlTest = IMGUrlString.replace(/\"/g, "");
-      // // document.getElementById("manuelUrl").innerHTML = manuelUrlTest;
-      var str = "url";
-      var result = str.link(IMGUrlTest);
-      // $("#demo").append("<img src='"+IMGUrlTest+"' />")
-      //    });
+     //  var ProductCode = data.marquette.map(function(item) {
+     //    //return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
+     //    return JSON.stringify(item.ProductCode);
+     //  });
      //
-     // document.getElementById("img-container").append("<img src=\" + result + "\" />");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      var marquette2 = data.marquette.map(function(item) {
-        return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
-
-      });
+     //  ProductCodeString = ProductCode.join();
+     //  ProductCodeTest = ProductCodeString.replace(/\"/g, "");
+     //  document.getElementById("ProductCode").innerHTML = ProductCodeTest;
+     //
+     //
+     //
+     //
+     //
+     //  /////////////////////////////////////////////////////////////////////////////////////////////
+     //  /////////////////////////////////////////////////////////////////////////////////////////////
+     //  /////////////////////////////////////////////////////////////////////////////////////////////
+     //  /////////////////////////////////////////////////////////////////////////////////////////////
+     //  //  this sectino is to get the url
+     //  var manuelUrl = data.marquette.map(function(item) {
+     //    //return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
+     //    return JSON.stringify(item.manuelUrl);
+     //  });
+     //
+     //  manuelUrlString = manuelUrl.join();
+     //  manuelUrlTest = manuelUrlString.replace(/\"/g, "");
+     //  // document.getElementById("manuelUrl").innerHTML = manuelUrlTest;
+     //  var str = "url";
+     //  var result = str.link(manuelUrlTest);
+     //  document.getElementById("manuelUrl").innerHTML = result;
+     //
+     //
+     //  /////////////////////////////////////////////////////////////////////////////////////////////
+     //  /////////////////////////////////////////////////////////////////////////////////////////////
+     //  /////////////////////////////////////////////////////////////////////////////////////////////
+     //  /////////////////////////////////////////////////////////////////////////////////////////////
+     //  //  this sectino is to get the url
+     //  var IMGUrl = data.marquette.map(function(item) {
+     //    //return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
+     //    return JSON.stringify(item.IMGUrl);
+     //  });
+     //
+     //
+     //
+     //
+     //  IMGUrlString = IMGUrl.join();
+     //  IMGUrlTest = IMGUrlString.replace(/\"/g, "");
+     //  // // document.getElementById("manuelUrl").innerHTML = manuelUrlTest;
+     //  var str = "url";
+     //  var result = str.link(IMGUrlTest);
+     //  // $("#demo").append("<img src='"+IMGUrlTest+"' />")
+     //  //    });
+     // //
+     // // document.getElementById("img-container").append("<img src=\" + result + "\" />");
+     //
+     //
+     //
+     //
+     //
+     //
+     //
+     //
+     //
+     //
+     //
+     //
+     //
+     //
+     //
+     //
+     //
+     //
+     //
+     //
+     //  var marquette2 = data.marquette.map(function(item) {
+     //    return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
+     //
+     //  });
 
       // Remove all child nodes (including text nodes)
        //infoList.empty();
@@ -224,13 +224,13 @@ $(function() {
       // myJSON = json.replace(/\"([^(\")"]+)\":/g,"$1:");
       //document.getElementById("demo").innerHTML = test;
       // Format model with HTML tags
-      if (marquette2.length) {
-        var content = "<li>" + marquette2.join("</li><li>") + "</li>";
-        var list = $("<ul>").html(content);
-        infoList.append(list);
-
-
-      }
+      // if (marquette2.length) {
+      //   var content = "<li>" + marquette2.join("</li><li>") + "</li>";
+      //   var list = $("<ul>").html(content);
+      //   infoList.append(list);
+      //
+      //
+      // }
     });
   });
 });
