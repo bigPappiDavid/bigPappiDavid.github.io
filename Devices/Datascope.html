@@ -100,6 +100,14 @@ $(function() {
 
       });
 
+      data.Datascope1.map( function(obj) {
+      var img = new Image();
+      img.src = obj.modleImg;
+      img.setAttribute("class", "banner-img");
+      img.setAttribute("alt", "effy");
+      document.getElementById("img-container").appendChild(img);
+      });
+
 
       //title.return.JSON.stringify(item.manufacture + " " + item.Model + " ");
 
@@ -257,7 +265,8 @@ $(function() {
 
 		<!-- <button type="button" class="btn btn-default">View Profile</button> -->
 	</div>
-<div id = "display" style = "background-color:#39B54A;"></div>
+  <div class="banner-section" id="img-container">
+      </div>
   <div class="container-fluid">
                 <div class="row">
                   <div class="col-xl-12 ">
