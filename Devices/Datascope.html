@@ -91,7 +91,11 @@ $(function() {
       var title = data.Datascope1.map(function(item) {
 
         //return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
-        return JSON.stringify(item.manufacture + " " + item.Model + " ");
+        // return JSON.stringify(item.manufacture + " " + item.Model + " ");
+        $('#display').html('<p> Name: ' + item.manufacture + '</p>');
+        $('#display').append('<p>Age : ' + item.ProductCode+ '</p>');
+        $('#display').append('<p> Role: ' + item.Model '</p>');
+        $('#display').append('<p> Company: ' + item.Cuff+ '</p>');
       });
 
       //title.return.JSON.stringify(item.manufacture + " " + item.Model + " ");
@@ -250,7 +254,7 @@ $(function() {
 
 		<!-- <button type="button" class="btn btn-default">View Profile</button> -->
 	</div>
-
+<div id = "display" style = "background-color:#39B54A;"></div> 
   <div class="container-fluid">
                 <div class="row">
                   <div class="col-xl-12 ">
