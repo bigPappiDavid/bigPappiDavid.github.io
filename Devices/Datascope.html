@@ -87,8 +87,8 @@ $(function() {
     $.getJSON(url, function(data) {
 
       //  this sectino is to get the title info into a variable
-      var bob = data.Datascope1.map
-      var title = bob(function(item) {
+      // var bob = data.Datascope1.map
+      var title = data.Datascope1.map(function(item) {
 
         //return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
         return JSON.stringify(item.manufacture + " " + item.Model + " ");
