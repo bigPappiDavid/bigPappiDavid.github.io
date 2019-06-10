@@ -97,6 +97,7 @@ $(function() {
         $('#Model').append(item.Model);
         $('#ProductCode').append(item.ProductCode);
         $('#Cuff').append(item.Cuff);
+        $('#modleImg').append('<img src="' + item.modleImg + '" alt="avatar" />';);
 
       });
 
@@ -260,6 +261,7 @@ $(function() {
 <div class="container-fluid home-main">
 		<h2  id="title">
       <h1 Class="blinker">.</h1>
+
     </h2>
     <!-- <span class="blinker">.</span> -->
 
@@ -306,8 +308,8 @@ $(function() {
                       				<!-- <div class="content1-left"></div> -->
                       			</div>
                       			<div class="col-md-6 content1-right">
-                              <img class="img" id="demo"alt="">
-                              <!-- <div id="demo"></div> -->
+                              <!-- <img class="img" id="demo"alt=""> -->
+                              <div id="modleImg "></div>
                               <div class="banner-section" id="img-container">
       </div>
 
