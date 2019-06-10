@@ -11,7 +11,7 @@
 
   ],
 
-  "Datascope" : [
+  "DatascopePassport" : [
     {
       "manufacture":"Datascope",
       "ProductCode": "3110",
@@ -24,7 +24,7 @@
 
   ],
 
-  "Datascope2" : [
+  "DatascopePassport2" : [
     {
       "manufacture":"Datascope",
       "ProductCode": "3110",
@@ -35,7 +35,7 @@
 
   ],
 
-  "DatascopeXG" : [
+  "DatascopePassportXG" : [
     {
       "manufacture":"Datascope",
       "ProductCode": "3110",
