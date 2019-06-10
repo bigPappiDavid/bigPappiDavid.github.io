@@ -94,8 +94,8 @@ $(function() {
         // return JSON.stringify(item.manufacture + " " + item.Model + " ");
         $('#manufacture').html(item.manufacture);
         $('#ProductCode').append(item.ProductCode);
-        $('#Model').append('<p> Role: ' + item.Model+ '</p>');
-        $('#Cuff').append('<p> Company: ' + item.Cuff+ '</p>');
+        $('#Model').append(item.Model);
+        $('#Cuff').append(item.Cuff);
 
       });
 
@@ -288,6 +288,7 @@ $(function() {
     <li class="list-group-item " > <span class="badge">Manufacture</span> <h2  id="manufacture"> </h2> </li>
     <li class="list-group-item " > <span class="badge">Model</span> <h2  id="Model"> </h2> </li>
     <li class="list-group-item" > <span class="badge">ProductCode</span> <h2  id="ProductCode"> </h2> </li>
+    <li class="list-group-item" > <span class="badge">Cuff</span> <h2  id="Cuff"> </h2> </li>
     <li class="list-group-item"><span class="badge">Manuel</span> <p id="manuelUrl"></p></li>
   </ul>
 </div>
