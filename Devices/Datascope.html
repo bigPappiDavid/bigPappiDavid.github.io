@@ -80,14 +80,15 @@ $(function() {
   $(document).ready(function() {
 
     // Put artistList element and JSON file location into a variable
-    var infoList= $("#infoList");
+    // var infoList= $("#infoList");
     var url = "https://bigpappidavid.github.io/Devices/model.json";
 
     // Get the JSON file
     $.getJSON(url, function(data) {
 
       //  this sectino is to get the title info into a variable
-      var title = data.Datascope1.map(function(item) {
+      var x = Datascope1
+      var title = data.x.map(function(item) {
 
         //return item.manufacture + " (" + item.ProductCode + ")" + item.Model + item.manuelurl + item.Cuff;
         return JSON.stringify(item.manufacture + " " + item.Model + " ");
