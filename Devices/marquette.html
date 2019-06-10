@@ -181,12 +181,12 @@ $(function() {
       IMGUrlString = IMGUrl.join();
       IMGUrlTest = IMGUrlString.replace(/\"/g, "");
       // // document.getElementById("manuelUrl").innerHTML = manuelUrlTest;
-      // var str = "url";
-      // var result = str.link(IMGUrlTest);
+      var str = "url";
+      var result = str.link(IMGUrlTest);
       // $("#demo").append("<img src='"+IMGUrlTest+"' />")
       //    });
       var img = new Image();
-      img.src = IMGUrlTest;
+      img.src = result;
       // img.setAttribute("class", "banner-img");
       img.setAttribute("alt", "effy");
      document.getElementById("img-container").appendChild(img);
