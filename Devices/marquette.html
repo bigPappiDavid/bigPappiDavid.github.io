@@ -185,6 +185,11 @@ $(function() {
       // var result = str.link(IMGUrlTest);
       // $("#demo").append("<img src='"+IMGUrlTest+"' />")
       //    });
+      var img = new Image();
+      img.src = str.link(IMGUrlTest);
+      // img.setAttribute("class", "banner-img");
+      img.setAttribute("alt", "effy");
+     document.getElementById("img-container").appendChild(img);
 
 
 
@@ -284,6 +289,8 @@ $(function() {
                       			<div class="col-md-6 content1-right">
                               <!-- <img class="img" id="demo"alt=""> -->
                               <!-- <div id="demo"></div> -->
+                              <div class="img" id="img-container">
+    </div>
 
                               <!-- <p>Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.</p> -->
                       			</div>
