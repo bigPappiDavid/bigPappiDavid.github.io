@@ -32,6 +32,14 @@
     "Model":"PassportXG",
     "manuelurl":"https://engineerDavid.github.io/Devices/DatascopePassportXG.html",
     "Cuff":"Single"
+  },
+
+  {
+    "manufacture":"Critikon",
+    "Product Code": "3110",
+    "Model":"Dinamap Vital Signs Monitor 1846 SX",
+    "manuelurl":"https://engineerDavid.github.io/Devices/Critikon.html",
+    "Cuff":"Double"
   }
 
 
